@@ -1,0 +1,4 @@
+mkpasswd.o: mkpasswd.c config.h utils.h
+utils.o: utils.c utils.h
+whois.o: whois.c config.h data.h ip_del.h ip6_del.h as_del.h as32_del.h \
+  tld_serv.h whois.h utils.h

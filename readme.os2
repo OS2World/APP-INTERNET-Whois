@@ -1,0 +1,41 @@
+This is whois v4.7.30 for OS/2.
+
+Compiled with gcc-3.3.5csd3 for OS/2 so you will need
+the GCC runtime lib(s) in your DPATH somewere. Most
+people will already have the latest GCC runtime installed.
+
+If you want to compile whois yourself.
+======================================
+Whois compiles with only minimal changes, ie
+
+edit makefile and uncomment the lines
+
+
+#whois_LDADD += -lsocket
+#LDFLAGS += -Zexe -Dstrncasecmp=strnicmp
+
+under 'OS/2 EMX'.
+
+config.diff provided by Steven Levine for turning on NLS support
+and long option support.
+
+
+Using Whois
+===========
+The only file you need to use whois is the exe file
+in your path somewere. If you want to use a different
+or new whois server than the ones compiled in the
+executable, you will also require whois.conf in which
+you can add any additional whois server information.
+
+Why have I compiled a new version ?
+
+The older OS/2 version was baffing on IP ranges which
+have since been released from the bogon list.
+Primarily addition ranges have been released to Asia and Australia.
+
+Cheers
+Ian Manners
+http://www.os2site.com/
+
+=-=-=-=
